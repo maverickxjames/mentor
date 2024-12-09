@@ -10,6 +10,34 @@
                 style="font-size: 1.5rem;color:black;padding-left:10px;font-family:'Times New Roman', Times, serif;font-weight:bold;letter-spacing:2px">
                 MENTORMYMATE</p>
         </div>
+
+        <div>
+            <form class="d-flex flex-grow-1 mx-3" role="search">
+                <div class="input-group">
+                    <!-- Search Input -->
+                    <input 
+                        type="text" 
+                        class="form-control" 
+                        placeholder="Search mentors, topics..." 
+                        aria-label="Search"
+                    >
+            
+                    <!-- Search Button -->
+                    <button 
+                        class="btn btn-primary d-flex align-items-center justify-content-center" 
+                        type="submit"
+                    >
+                        <img 
+                            src="https://cdn-icons-png.flaticon.com/512/49/49116.png" 
+                            alt="Search Icon" 
+                            width="18" 
+                            height="18"
+                        >
+                    </button>
+                </div>
+            </form>
+            
+        </div>
         <nav class="menu menu menu-primary c-nav-primary" role="navigation" id="menu-primary" aria-label="Primary Menu"
             itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement">
             <div class="nav_bar_wrapper">
@@ -34,11 +62,11 @@
                         <a href="#">Contact Us</a>
                         
                     </li>
-                    <li aria-expanded="false" id="menu-item-23951"
+                    {{-- <li aria-expanded="false" id="menu-item-23951"
                         class="o-menu__item--horizontal c-menu-primary__item c-menu-primary__item--23951 c-menu-primary__item--page c-menu-primary__item--has-children child-elements-8 ">
                         <a href="#">Login/Signup</a>
                         
-                    </li>
+                    </li> --}}
                     
                 </ul> 
                 
