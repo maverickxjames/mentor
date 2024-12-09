@@ -1,4 +1,4 @@
-<section class="o-section o-row o-row--width-full s-color-scheme">
+{{-- <section class="o-section o-row o-row--width-full s-color-scheme">
     <div class="o-row new-homepage-case-study o-row--width-normal s-color-scheme">
         <div class="o-container o-container--width-normal o-container--width-same">
             <div class="o-sm-col-12">
@@ -382,7 +382,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 
 
 <section class="o-section o-row homepage-stats-section o-row--width-full s-color-scheme">

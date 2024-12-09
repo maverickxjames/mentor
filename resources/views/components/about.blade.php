@@ -34,15 +34,15 @@
                             decoding="async" width="914" height="980"
                             src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
                             class="lazy " loading="lazy"
-                            data-src="wp-content/uploads/2023/11/Careers.png"
+                            data-src="wp-content/uploads/2023/11/about.jpg"
                             class="lazy vc_single_image-img attachment-full" alt title="Careers"
-                            data-srcset="wp-content/uploads/2023/11/Careers.png 914w, wp-content/uploads/2023/11/Careers-280x300.png 280w, wp-content/uploads/2023/11/Careers-768x823.png 768w"
+                            data-srcset="wp-content/uploads/2023/11/Careers.png 914w,wp-content/uploads/2023/11/about.jpg 280w, wp-content/uploads/2023/11/about.jpg 768w"
                             sizes="(max-width: 914px) 100vw, 914px" /><noscript><img
                                 decoding="async" width="914" height="980"
-                                src="wp-content/uploads/2023/11/Careers.png"
+                                src="wp-content/uploads/2023/11/about.jpg"
                                 class="vc_single_image-img attachment-full" alt=""
                                 title="Careers"
-                                srcset="wp-content/uploads/2023/11/Careers.png 914w, wp-content/uploads/2023/11/Careers-280x300.png 280w, wp-content/uploads/2023/11/Careers-768x823.png 768w"
+                                srcset="wp-content/uploads/2023/11/about.jpg 914w, wp-content/uploads/2023/11/about.jpg 280w, wp-content/uploads/2023/11/about.jpg 768w"
                                 sizes="(max-width: 914px) 100vw, 914px" /></noscript></div>
                 </figure>
             </div>

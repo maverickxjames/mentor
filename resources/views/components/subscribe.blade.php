@@ -1,10 +1,10 @@
-<div class="o-row o-row--width-normal s-color-scheme">
+{{-- <div class="o-row o-row--width-normal s-color-scheme">
     <div class="o-container o-container--width-normal o-container--width-same">
         <div class="o-sm-col-12">
             <div class="c-empty-space c-empty-space--md"></div>
         </div>
     </div>
-</div>
+</div> --}}
 
 
 
@@ -12,9 +12,9 @@
 <div class="o-row new-homepage-contact-us o-row--width-normal s-color-scheme">
     <div class="o-container o-container--width-normal o-container--width-same">
         <div class="o-sm-col-12">
-            <div class="o-row o-container">
+            {{-- <div class="o-row o-container">
                 <div
-                    class="o-sm-col-12 o-lg-col-offset-0 o-lg-col-5 o-md-col-offset-0 o-md-col-5 o-sm-col-offset-0 o-hidden-sm o-xs-col-12 o-hidden-xs">
+                class="o-sm-col-12 o-lg-col-offset-0 o-lg-col-4 o-hidden-lg o-md-col-offset-0 o-md-col-4 o-hidden-md o-sm-col-offset-0 o-xs-col-12">
                     <div class="c-headings-block gradient_color gradient_color u-font-size-extra-large">
                         <div class=" u-font-size-extra-large c-headings-block__sub">
                             </p>
@@ -56,7 +56,7 @@
                     </div>
                     <div class="c-empty-space c-empty-space--lg"></div>
                 </div>
-            </div>
+            </div> --}}
             <div class="o-row o-container">
                 <div
                     class="o-sm-col-12 o-lg-col-offset-0 o-lg-col-4 o-hidden-lg o-md-col-offset-0 o-md-col-4 o-hidden-md o-sm-col-offset-0 o-xs-col-12">
@@ -81,6 +81,13 @@
                                     <input type="text" name="name" class="form-control"
                                         value="{{ old('name') }}" required>
                                     <span class="text-danger">{{ $errors->first('name') }}</span>
+                                </div>
+                                <div class="upload-container">
+                                    <div id="uploadArea3" class="upload-area">
+                                        <input name="profile" type="file" id="fileInput3" class="upload-input" style="display: none;" required/>
+                                        <button type="button" class="upload-button" id="browseButton3">Upload Profile Image<span style="color:red">*</span></button>
+                                    </div>
+                                    <div class="preview-container" id="previewContainer3"></div>
                                 </div>
                                 <div class="form-group
                                     {{ $errors->has('email') ? 'has-error' : '' }}">
@@ -113,6 +120,8 @@
                                     </div>
                                     <div class="preview-container" id="previewContainer"></div>
                                 </div>
+
+                               
 
                                 {{-- year with dropdown option 2022,2023,2024,2025 --}}
 
@@ -150,12 +159,18 @@
                                 {{ $errors->has('scoreproof') ? 'has-error' : '' }}
                                 <div class="preview-container" id="previewContainer2"></div>
                             </div>
-                                
+                            <div class="form-group
+                            {{ $errors->has('subject_expert') ? 'has-error' : '' }}">
+                            <label for="subject_expert"> Subject Expert<span style="color:red">*</span></label>
+                            <input type="text" name="subject_expert" class="form-control"
+                                value="{{ old('subject_expert') }}" required>
+                            <span class="text-danger">{{ $errors->first('subject_expert') }}</span>
+                        </div>
                                 
                                 <div class="form-group
                                     {{ $errors->has('message') ? 'has-error' : '' }}">
-                                    <label for="message">About Yourself (Optional)</label>
-                                    <textarea required name="message" placeholder="Tell us about yourself to get easy approval" class="form-control">{{ old('message') }}</textarea>
+                                    <label for="message">About Yourself <span style="color:red">*</span></label>
+                                    <textarea required name="message" placeholder="Tell us about your success story" class="form-control">{{ old('message') }}</textarea>
                                     <span class="text-danger">{{ $errors->first('message') }}</span>
                                 </div>
                                 <div class="form-group

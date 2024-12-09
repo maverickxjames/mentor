@@ -18,8 +18,12 @@ class SubscribeController extends Controller
             'year' => 'required',
             'score' => 'required',
             'scoreproof' => 'required|file|mimes:pdf,png,jpg,jpeg,gif|max:2048',
+            'motorsport' => 'required',
+            'subject' => 'required',
             // 'consent' => 'required',
         ]);
+
+        echo "<script>Success</script>";
 
         // upload college and score proof files
 
@@ -35,12 +39,16 @@ class SubscribeController extends Controller
         $subscribe->year = $request->year;
         $subscribe->score = $request->score;
         $subscribe->scoreproof = $scoreproof;
+        $subscribe->message = $request->message;
+        $subscribe->subject_expert = $request->subject_expert;
         // $subscribe->consent = $request->consent;
         $subscribe->save();
 
         if($subscribe){
+           echo "<script>Success</script>";
             return redirect()->back()->with('success','Your request has been submitted successfully');
         }else{
+            echo "<script>Error</script>";
             return redirect()->back()->with('error','Failed to subscribe');
         }
 

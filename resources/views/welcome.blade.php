@@ -47,9 +47,26 @@
         {{-- swal fire cdn  --}}
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
         {{-- bootstrap cdn --}}
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
  
 
-
+        <style>
+            .carousel-wrapper {
+                overflow: hidden;
+                white-space: nowrap;
+            }
+    
+            .carousel-item {
+                display: inline-block;
+                vertical-align: top;
+                width: 25%; /* Adjust the width for responsiveness */
+                padding: 10px;
+            }
+    
+            .pagination {
+                justify-content: center;
+            }
+        </style>
 
     <style id="classic-theme-styles-inline-css" type="text/css">
         /*! This file is auto-generated */
@@ -643,7 +660,7 @@ var whp_local_data = {"add_url":"https:\/\/mentormate.com\/wp-admin\/post-new.ph
                 <div class="o-vc-layout">
                     <x-hero />
                     <x-main />
-                    <x-testimonial />
+                    {{-- <x-testimonial /> --}}
 
                     <section
                         class="o-section o-row has-header-overlay has-glass-effect o-row--width-full s-color-scheme">
@@ -651,17 +668,18 @@ var whp_local_data = {"add_url":"https:\/\/mentormate.com\/wp-admin\/post-new.ph
                             <div class="overlap-glass-effect-background"></div>
                         </div>
                         <div class="c-overlay"></div>
-                        <div class="o-row o-row--width-normal s-color-scheme">
+                        {{-- <div class="o-row o-row--width-normal s-color-scheme">
                             <div class="o-container o-container--width-normal o-container--width-same">
                                 <div class="o-sm-col-12">
                                     <div class="c-empty-space c-empty-space--sm"></div>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                         <x-about />
 
 
                         <x-subscribe />
+                        <x-allAdmin/>
                     </section>
                 </div>
             </main>
@@ -783,8 +801,26 @@ function setupUploadArea(fileInputId, browseButtonId, uploadAreaId, previewConta
 // Set up both upload areas
 setupUploadArea('fileInput', 'browseButton', 'uploadArea', 'previewContainer');
 setupUploadArea('fileInput2', 'browseButton2', 'uploadArea2', 'previewContainer2');
+setupUploadArea('fileInput3', 'browseButton3', 'uploadArea3', 'previewContainer3');
 
     </script>
+
+<script>
+    const carousel = document.getElementById('mentor-carousel');
+    const nextBtn = document.getElementById('next-btn');
+    const prevBtn = document.getElementById('prev-btn');
+    let scrollAmount = 0;
+
+    nextBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        carousel.scrollBy({ left: 300, behavior: 'smooth' });
+    });
+
+    prevBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        carousel.scrollBy({ left: -300, behavior: 'smooth' });
+    });
+</script>
 
 </body>
 

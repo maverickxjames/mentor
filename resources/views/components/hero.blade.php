@@ -139,7 +139,7 @@
             </div>
         </div>
     </div>
-    <div class="o-row o-row--width-normal s-color-scheme">
+    {{-- <div class="o-row o-row--width-normal s-color-scheme">
         <div class="o-container o-container--width-normal o-container--width-same">
             <div class="o-sm-col-12">
                 <div class="c-empty-space c-empty-space--xs"></div>
@@ -152,5 +152,5 @@
                 <div class="c-empty-space c-empty-space--md"></div>
             </div>
         </div>
-    </div>
+    </div> --}}
 </section>
