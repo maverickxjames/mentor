@@ -35,6 +35,7 @@ use Illuminate\Support\Facades\Storage;
                     <th>Scorecard</th>
                     <th>Message</th>
                     <th>Created At</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -49,31 +50,32 @@ use Illuminate\Support\Facades\Storage;
                     <td>{{ $subscribe->phone }}</td>
                     <td>{{ $subscribe->college }}</td>
                     <td>
-                        <img src="{{ Storage::url('private/' . $subscribe->collegeproof) }}" alt="">
+                        <img src="{{ asset('uploads/college/'.$subscribe->collegeproof) }}" alt="" width="40px" height="auto">
                     </td>
                     <td>{{ $subscribe->year }}</td>
                     <td>{{ $subscribe->score }}</td>
-                    <td>{{ $subscribe->scoreproof }}</td>
+                    <td>  <img src="{{ asset('uploads/score/'.$subscribe->scoreproof) }}" alt="" width="40px" height="auto"></td>
                     <td>{{ $subscribe->created_at }}</td>
                     <td>{{ $subscribe->created_at }}</td>
+                    <td>
+                        @php
+                            if($subscribe->status == 0){
+                                echo '<a href="/admin/verify/'.$subscribe->id.'" class="btn btn-primary">Verify</a>';
+                            }else if($subscribe->status == 2){
+                                echo '<a href="/admin/verify/'.$subscribe->id.'" class="btn btn-primary">Verify</a>';
+                            }else if($subscribe->status == 3){
+                                echo 'Permanent Ban';
+                            }else{
+                                echo '<div><a href="/admin/temp_ban/'.$subscribe->id.'" class="btn btn-primary">Temporary Ban</a>
+                                    <a href="/admin/perm_ban/'.$subscribe->id.'" class="btn btn-danger">Permanent Ban</a>
+                                    </div>';
+                            }
+                        @endphp
+                    </td>
                 </tr>
                 @endforeach
             </tbody>
-            <tfoot>
-                <tr>
-                    <th>SR</th>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Phone</th>
-                    <th>College</th>
-                    <th>College ID</th>
-                    <th>Year</th>
-                    <th>NEET AIR</th>
-                    <th>Scorecard</th>
-                    <th>Message</th>
-                    <th>Created At</th>
-                </tr>
-            </tfoot>
+          
         </table>
     </div>
 

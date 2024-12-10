@@ -14,7 +14,7 @@
         <div class="o-sm-col-12">
             {{-- <div class="o-row o-container">
                 <div
-                class="o-sm-col-12 o-lg-col-offset-0 o-lg-col-4 o-hidden-lg o-md-col-offset-0 o-md-col-4 o-hidden-md o-sm-col-offset-0 o-xs-col-12">
+                    class="o-sm-col-12 o-lg-col-offset-0 o-lg-col-4 o-hidden-lg o-md-col-offset-0 o-md-col-4 o-hidden-md o-sm-col-offset-0 o-xs-col-12">
                     <div class="c-headings-block gradient_color gradient_color u-font-size-extra-large">
                         <div class=" u-font-size-extra-large c-headings-block__sub">
                             </p>
@@ -71,65 +71,81 @@
                         <div id="hubspot-form-35af469e-31f9-44cb-8d2c-24ffa4a83132-87753"
                             class="c-hs-form-wrap js-hs-form-wrap">
 
-                            {{-- bootstrap form to accept mentors data and insert into database  --}}
+                            {{-- bootstrap form to accept mentors data and insert into database --}}
 
                             <form method="POST" action="{{ route('subscribe.save') }}" enctype="multipart/form-data">
                                 @csrf
+
+                                {{-- Name --}}
                                 <div class="form-group
                                     {{ $errors->has('name') ? 'has-error' : '' }}">
                                     <label for="name">Name <span style="color:red">*</span></label>
-                                    <input type="text" name="name" class="form-control"
-                                        value="{{ old('name') }}" required>
+                                    <input type="text" name="name" class="form-control" value="{{ old('name') }}"
+                                        required>
                                     <span class="text-danger">{{ $errors->first('name') }}</span>
                                 </div>
+
+                                {{-- Upload Profile --}}
                                 <div class="upload-container">
                                     <div id="uploadArea3" class="upload-area">
-                                        <input name="profile" type="file" id="fileInput3" class="upload-input" style="display: none;" required/>
-                                        <button type="button" class="upload-button" id="browseButton3">Upload Profile Image<span style="color:red">*</span></button>
+                                        <input name="profile" type="file" id="fileInput3" class="upload-input"
+                                            style="display: none;" required />
+                                        <button type="button" class="upload-button" id="browseButton3">Upload Profile
+                                            Image<span style="color:red">*</span></button>
                                     </div>
                                     <div class="preview-container" id="previewContainer3"></div>
                                 </div>
+
+                                {{ $errors->has('profile') ? 'has-error' : '' }}
+
+
+                                {{-- Email --}}
                                 <div class="form-group
                                     {{ $errors->has('email') ? 'has-error' : '' }}">
                                     <label for="email">Email <span style="color:red">*</span></label>
-                                    <input type="email" name="email" class="form-control"
-                                        value="{{ old('email') }}" required>
+                                    <input type="email" name="email" class="form-control" value="{{ old('email') }}"
+                                        required>
                                     <span class="text-danger">{{ $errors->first('email') }}</span>
                                 </div>
+
+                                {{-- Phone --}}
                                 <div class="form-group
                                     {{ $errors->has('phone') ? 'has-error' : '' }}">
                                     <label for="phone">Phone (+91) <span style="color:red">*</span></label>
-                                    <input type="text" name="phone" class="form-control"
-                                        value="{{ old('phone') }}" onkeyup="this.value = this.value.replace(/[^0-9]/g, '')" required>
+                                    <input type="text" name="phone" class="form-control" value="{{ old('phone') }}"
+                                        onkeyup="this.value = this.value.replace(/[^0-9]/g, '')" required>
                                     <span class="text-danger">{{ $errors->first('phone') }}</span>
                                 </div>
+
+                                {{-- College --}}
                                 <div class="form-group
                                     {{ $errors->has('college') ? 'has-error' : '' }}">
                                     <label for="college">College Name <span style="color:red">*</span></label>
-                                    <input type="text" name="college" class="form-control"
-                                        value="{{ old('college') }}" required>
+                                    <input type="text" name="college" class="form-control" value="{{ old('college') }}"
+                                        required>
                                     <span class="text-danger">{{ $errors->first('college') }}</span>
                                 </div>
 
                                 <br>
 
+                                {{-- upload college id --}}
                                 <div class="upload-container">
                                     <div id="uploadArea" class="upload-area">
-                                        <input name="collegeproof" type="file" id="fileInput" class="upload-input" multiple style="display: none;" required/>
-                                        <button type="button" class="upload-button" id="browseButton">Upload College ID / Document <span style="color:red">*</span></button>
+                                        <input name="collegeproof" type="file" id="fileInput" class="upload-input"
+                                            multiple style="display: none;" required />
+                                        <button type="button" class="upload-button" id="browseButton">Upload College ID
+                                            / Document <span style="color:red">*</span></button>
                                     </div>
                                     <div class="preview-container" id="previewContainer"></div>
                                 </div>
 
-                               
-
-                                {{-- year with dropdown option 2022,2023,2024,2025 --}}
 
 
+                                {{-- Qualification Year --}}
                                 <div class="form-group
                                     {{ $errors->has('year') ? 'has-error' : '' }}">
                                     <label for="year">Neet Qualifying Year <span style="color:red">*</span></label>
-                                   
+
                                     <select id="select2" name="year" id="year" required>
                                         <option value="2022">2022</option>
                                         <option value="2023">2023</option>
@@ -139,40 +155,61 @@
 
                                 </div>
 
-                                
+                                {{-- NEET Score --}}
                                 <div class="form-group
                                     {{ $errors->has('score') ? 'has-error' : '' }}">
                                     <label for="score">NEET All India Rank <span style="color:red">*</span></label>
-                                    <input type="text" name="score" class="form-control"
-                                        value="{{ old('score') }}" required>
+                                    <input type="text" name="score" class="form-control" value="{{ old('score') }}"
+                                        required>
                                     <span class="text-danger">{{ $errors->first('score') }}</span>
                                 </div>
                                 <br>
-                                
-                               {{-- upload score card  --}}
 
-                               <div class="upload-container">
-                                <div id="uploadArea2" class="upload-area">
-                                    <input name="scoreproof" type="file" id="fileInput2" class="upload-input" style="display: none;" required/>
-                                    <button type="button" class="upload-button" id="browseButton2">Upload Score Card <span style="color:red">*</span></button>
+                                {{-- upload score card --}}
+                                <div class="upload-container">
+                                    <div id="uploadArea2" class="upload-area">
+                                        <input name="scoreproof" type="file" id="fileInput2" class="upload-input"
+                                            style="display: none;" required />
+                                        <button type="button" class="upload-button" id="browseButton2">Upload Score Card
+                                            <span style="color:red">*</span></button>
+                                    </div>
+                                    {{ $errors->has('scoreproof') ? 'has-error' : '' }}
+                                    <div class="preview-container" id="previewContainer2"></div>
                                 </div>
-                                {{ $errors->has('scoreproof') ? 'has-error' : '' }}
-                                <div class="preview-container" id="previewContainer2"></div>
-                            </div>
-                            <div class="form-group
-                            {{ $errors->has('subject_expert') ? 'has-error' : '' }}">
-                            <label for="subject_expert"> Subject Expert<span style="color:red">*</span></label>
-                            <input type="text" name="subject_expert" class="form-control"
-                                value="{{ old('subject_expert') }}" required>
-                            <span class="text-danger">{{ $errors->first('subject_expert') }}</span>
-                        </div>
-                                
+
+                                {{-- Subject Expert --}}
+                                <div class="form-group
+                               {{ $errors->has('subject_expert') ? 'has-error' : '' }}">
+                                    <label for="subject_expert"> Subject Expert<span style="color:red">*</span></label>
+                                    <input type="text" name="subject_expert" class="form-control"
+                                        value="{{ old('subject_expert') }}" required>
+                                    <span class="text-danger">{{ $errors->first('subject_expert') }}</span>
+                                </div>
+                                    
+                                    {{-- Message --}}
                                 <div class="form-group
                                     {{ $errors->has('message') ? 'has-error' : '' }}">
                                     <label for="message">About Yourself <span style="color:red">*</span></label>
-                                    <textarea required name="message" placeholder="Tell us about your success story" class="form-control">{{ old('message') }}</textarea>
+                                    <textarea required name="message" placeholder="Tell us about your success story"
+                                        class="form-control">{{ old('message') }}</textarea>
                                     <span class="text-danger">{{ $errors->first('message') }}</span>
                                 </div>
+                                
+                               {{-- Upload Vedio Clip --}}
+
+                                <div class="upload-container">
+                                    <div id="uploadArea4" class="upload-area">
+                                        <input name="video_clip" type="file" id="fileInput4" class="upload-input"
+                                            style="display: none;" required />
+                                        <button type="button" class="upload-button" id="browseButton4">Upload Video Clip
+                                            <span style="color:red">*</span></button>
+                                    </div>
+                                    <div class="preview-container" id="previewContainer4"></div>
+                                </div>
+
+                                {{ $errors->has('video_clip') ? $errors->first('video_clip') : '' }}
+
+                                {{-- Consent --}}
                                 <div class="form-group
                                     {{ $errors->has('consent') ? 'has-error' : '' }}">
                                     <label for="consent">Consent</label>
@@ -181,7 +218,7 @@
                                     <span class="text-danger">{{ $errors->first('consent') }}</span>
                                 </div>
 
-                                {{-- submit button  --}}
+                                {{-- submit button --}}
 
                                 <div class="form-group
                                     {{ $errors->has('submit') ? 'has-error' : '' }}">
@@ -189,19 +226,19 @@
                                 </div>
                             </form>
 
-                                {{-- if success swal fire shown  --}}
-                                @if (Session::has('success'))
-                                    <script>
-                                        Swal.fire({
+                            {{-- if success swal fire shown --}}
+                            @if (Session::has('success'))
+                            <script>
+                                Swal.fire({
                                             title: 'Success',
                                             text: '{{ Session::get('success') }}',
                                             icon: 'success',
                                             confirmButtonText: 'Ok'
                                         })
 
-                                    </script>
-                                @endif
-                           
+                            </script>
+                            @endif
+
 
 
                         </div>
@@ -213,9 +250,4 @@
     </div>
 </div>
 
-{{-- select2 js  --}}
-
-
-
-
-
+{{-- select2 js --}}

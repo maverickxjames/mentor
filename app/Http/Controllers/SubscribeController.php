@@ -10,7 +10,7 @@ class SubscribeController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'email' => 'required|email',
+            'email' => 'required|email|unique:subscribes,email',
             'name' => 'required',
             'phone' => 'required|numeric',
             'college' => 'required',
@@ -18,17 +18,34 @@ class SubscribeController extends Controller
             'year' => 'required',
             'score' => 'required',
             'scoreproof' => 'required|file|mimes:pdf,png,jpg,jpeg,gif|max:2048',
-            'motorsport' => 'required',
-            'subject' => 'required',
+            'message' => 'required',
+            'subject_expert' => 'required',
+            'profile' => 'required|file|mimes:pdf,png,jpg,jpeg,gif|max:2048',
+            'video_clip' => 'required|file|mimes:mp4,3gp,avi,mov,flv,wmv|max:20480',
+        
+
             // 'consent' => 'required',
         ]);
 
-        echo "<script>Success</script>";
 
-        // upload college and score proof files
+        // upload these files to public folder and store the path in database
 
-        $collegeproof = $request->file('collegeproof')->store('proofs');
-        $scoreproof = $request->file('scoreproof')->store('proofs');
+        $collegeproof = time().'.'.$request->collegeproof->extension();
+        $request->collegeproof->move(public_path('uploads/college'), $collegeproof);
+
+        $scoreproof = time().'.'.$request->scoreproof->extension();
+        $request->scoreproof->move(public_path('uploads/score'), $scoreproof);
+
+        $profile = time().'.'.$request->profile->extension();
+        $request->profile->move(public_path('uploads/profile'), $profile);
+
+        $video_clip = time().'.'.$request->video_clip->extension();
+        $request->video_clip->move(public_path('uploads/video'), $video_clip);
+
+
+
+        
+        
 
         $subscribe = new Subscribe();
         $subscribe->email = $request->email;
@@ -41,14 +58,14 @@ class SubscribeController extends Controller
         $subscribe->scoreproof = $scoreproof;
         $subscribe->message = $request->message;
         $subscribe->subject_expert = $request->subject_expert;
+        $subscribe->profile = $profile;
+        $subscribe->vedio_clip = $video_clip;
         // $subscribe->consent = $request->consent;
         $subscribe->save();
 
         if($subscribe){
-           echo "<script>Success</script>";
             return redirect()->back()->with('success','Your request has been submitted successfully');
         }else{
-            echo "<script>Error</script>";
             return redirect()->back()->with('error','Failed to subscribe');
         }
 
@@ -61,4 +78,30 @@ class SubscribeController extends Controller
 
         return view('admin');
     }
+
+    public function verify($id)
+    {
+        $subscribe = Subscribe::find($id);
+        $subscribe->status = 1;
+        $subscribe->save();
+        return redirect()->back()->with('success','User verified successfully');
+    }
+
+    public function temp_ban($id)
+    {
+        $subscribe = Subscribe::find($id);
+        $subscribe->status = 2;
+        $subscribe->save();
+        return redirect()->back()->with('success','User banned temporarily');
+    }
+
+    public function perm_ban($id)
+    {
+        $subscribe = Subscribe::find($id);
+        $subscribe->status = 3;
+        $subscribe->save();
+        return redirect()->back()->with('success','User banned permanently');
+    }
+
+    
 }
