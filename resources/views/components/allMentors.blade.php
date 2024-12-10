@@ -16,7 +16,7 @@ if(count($subscribes) > 0){
         </div>
     
         
-        <div class="row">
+        <div class="row col-12">
             <!-- Card 1 -->
             @foreach($subscribes as $key => $subscribe)
 
