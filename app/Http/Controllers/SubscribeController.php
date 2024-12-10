@@ -103,5 +103,10 @@ class SubscribeController extends Controller
         return redirect()->back()->with('success','User banned permanently');
     }
 
+    public function about()
+    {
+        return view('aboutus');
+    }
+
     
 }

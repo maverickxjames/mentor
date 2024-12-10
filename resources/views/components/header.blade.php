@@ -11,7 +11,7 @@
                 MENTORMYMATE</p>
         </div>
 
-        <div>
+        {{-- <div>
             <form class="d-flex flex-grow-1 mx-3" role="search">
                 <div class="input-group">
                     <!-- Search Input -->
@@ -37,7 +37,7 @@
                 </div>
             </form>
             
-        </div>
+        </div> --}}
         <nav class="menu menu menu-primary c-nav-primary" role="navigation" id="menu-primary" aria-label="Primary Menu"
             itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement">
             <div class="nav_bar_wrapper">

@@ -9,6 +9,7 @@ Route::get('/', function () {
 
 Route::post('/subscribe',[SubscribeController::class,'store'])->name('subscribe.save');
 Route::get('/admin/subscribe',[SubscribeController::class,'index'])->name('subscribe.index');
+Route::get('about',[SubscribeController::class,'about'])->name('about');
 
 
 
