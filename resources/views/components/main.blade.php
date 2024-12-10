@@ -436,7 +436,7 @@
 <section class="o-section o-row new-homepage-logos-section-background o-row--width-full s-color-scheme">
     <div class="o-row homepage-stats-section__box__holder o-row--width-normal s-color-scheme">
         <div class="o-container o-container--width-normal o-container--width-same">
-            <div class="homepage-stats-section__box o-sm-col-6 o-lg-col-6 o-md-col-6 o-xs-col-12">
+            <div style="background: #272727" class="homepage-stats-section__box o-sm-col-6 o-lg-col-6 o-md-col-6 o-xs-col-12">
                 <div class="c-headings-block u-font-size-extra-large">
                     <h4 class="  c-headings-block__main h2">SIGN UP </h4>
                     <div class=" c-headings-block__sub">
@@ -448,7 +448,7 @@
                     </div>
                 </div>
             </div>
-            <div class="homepage-stats-section__box o-sm-col-6 o-lg-col-6 o-md-col-6 o-xs-col-12">
+            <div style="background: #272727" class="homepage-stats-section__box o-sm-col-6 o-lg-col-6 o-md-col-6 o-xs-col-12">
                 <div class="c-headings-block u-font-size-extra-large">
                     <h4 class="  c-headings-block__main h2">
                         Choose Mentor</h4>
@@ -460,7 +460,7 @@
                     </div>
                 </div>
             </div>
-            <div class="homepage-stats-section__box o-sm-col-6 o-lg-col-6 o-md-col-6 o-xs-col-12">
+            <div style="background: #272727" class="homepage-stats-section__box o-sm-col-6 o-lg-col-6 o-md-col-6 o-xs-col-12">
                 <div class="c-headings-block u-font-size-extra-large">
                     <h4 class="  c-headings-block__main h2">
                         Choose Date & Time</h4>
@@ -473,7 +473,7 @@
                     </div>
                 </div>
             </div>
-            <div class="homepage-stats-section__box o-sm-col-6 o-lg-col-6 o-md-col-6 o-xs-col-12">
+            <div style="background: #272727" class="homepage-stats-section__box o-sm-col-6 o-lg-col-6 o-md-col-6 o-xs-col-12">
                 <div class="c-headings-block u-font-size-extra-large">
                     <h4 class="  c-headings-block__main h2">
                         Payment </h4>
