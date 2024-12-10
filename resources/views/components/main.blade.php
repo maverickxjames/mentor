@@ -401,7 +401,7 @@
     </div>
     <div class="o-row o-row--width-normal s-color-scheme">
         <div class="o-container o-container--width-normal o-container--width-same">
-            <div class="c-headings-block color-white o-sm-col-12 o-lg-col-10 o-md-col-10 o-xs-col-12">
+            <div class=" color-white o-sm-col-12 o-lg-col-10 o-md-col-10 o-xs-col-12">
                 <div class="c-headings-block color-white u-font-size-extra-large">
                     <div class="c-headings-block__tag">
                         MENTORMYMATE</div>
@@ -415,12 +415,12 @@
                             Nordics, and South Asia.</h5>
                     </div>
                 </div> --}}
-                <div class="c-learn-more-holder">
+                {{-- <div class="c-learn-more-holder">
                     <div class="c-learn-more">
                         <a href="about/locations" class="c-learn-more-link "></a>
                         <div class="c-learn-more-title">Learn more</div>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>

@@ -25,6 +25,10 @@
                         </div>
                     </div>
                 </div>
+                <div class="o-row o-container d-flex justify-content-center">
+<a href="#subscribe"><button style="font-size:20px" class="btn btn-primary">Join as Mentor</button></a>
+                </div>
+                
                 <div class="c-empty-space c-empty-space--sm"></div>
             </div>
         </div>

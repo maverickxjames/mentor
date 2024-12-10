@@ -20,13 +20,13 @@
                                         <ul id="menu-sotsial-items" class="c-menu-sotsial c-menu-sotsial--footer">
                                             <li id="menu-item-19658"
                                                 class="c-menu-sotsial--bluebird c-menu-sotsial__item c-menu-sotsial__item--19658 c-menu-sotsial__item--custom">
-                                                <a target="_blank" rel="noopener"
-                                                    href="https://twitter.com/mentormate">Twitter</a>
+                                                <a target="" rel="noopener"
+                                                    href="#">Twitter</a>
                                             </li>
                                             <li id="menu-item-19657"
                                                 class="c-menu-sotsial--lnkdn c-menu-sotsial__item c-menu-sotsial__item--19657 c-menu-sotsial__item--custom">
                                                 <a target="_blank" rel="noopener"
-                                                    href="https://www.linkedin.com/company/mentormate">LinkedIn</a>
+                                                    href="#">LinkedIn</a>
                                             </li>
                                             <li id="menu-item-19659"
                                                 class="c-menu-sotsial--nstgrm c-menu-sotsial__item c-menu-sotsial__item--19659 c-menu-sotsial__item--custom">
@@ -36,7 +36,7 @@
                                             <li id="menu-item-19656"
                                                 class="c-menu-sotsial--fcbk c-menu-sotsial__item c-menu-sotsial__item--19656 c-menu-sotsial__item--custom">
                                                 <a target="_blank" rel="noopener"
-                                                    href="https://www.facebook.com/MentorMate">Facebook</a>
+                                                    href="#">Facebook</a>
                                             </li>
                                         </ul>
                                     </nav>

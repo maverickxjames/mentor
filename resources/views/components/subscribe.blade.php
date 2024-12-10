@@ -62,7 +62,7 @@
                     class="o-sm-col-12 o-lg-col-offset-0 o-lg-col-4 o-hidden-lg o-md-col-offset-0 o-md-col-4 o-hidden-md o-sm-col-offset-0 o-xs-col-12">
                     <div class="c-headings-block u-font-size-extra-large">
                         <h2 class="gradient_color  c-headings-block__main h3">
-                            Let’s Work Together </h2>
+                            Join As A Mentor </h2>
                     </div>
                 </div>
                 <div
