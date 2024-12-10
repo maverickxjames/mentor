@@ -385,7 +385,7 @@
 </section> --}}
 
 
-<section class="o-section o-row homepage-stats-section o-row--width-full s-color-scheme">
+<section id="main" class="o-section o-row homepage-stats-section o-row--width-full s-color-scheme">
     <div class="o-row homepage-map-holder-div o-row--width-normal s-color-scheme">
         <div class="o-container o-container--width-normal o-container--width-same">
             <div class="o-sm-col-12"></div>

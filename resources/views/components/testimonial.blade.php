@@ -1,4 +1,4 @@
-<section class="testimonials-section">
+<section id="testimonials" class="testimonials-section">
     <div class="o-row o-row--width-normal">
         <div class="o-containerr o-containerr--width-normal">
             <!-- Section Title -->

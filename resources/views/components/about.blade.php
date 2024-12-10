@@ -1,4 +1,4 @@
-<div class="o-row home-page-last-section-wrapper o-row--width-normal s-color-scheme">
+<div id="about" class="o-row home-page-last-section-wrapper o-row--width-normal s-color-scheme">
     <div class="o-container o-container--width-normal o-container--width-same">
         <div class="o-sm-col-12 o-lg-col-offset-0 o-lg-col-5 o-md-col-offset-0 o-md-col-5 o-xs-col-11">
             <div class="c-empty-space  space-hidden-for-desktop-down c-empty-space--sm"></div>

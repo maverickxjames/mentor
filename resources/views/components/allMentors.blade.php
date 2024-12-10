@@ -9,7 +9,7 @@ $subscribes = Subscribe::where('status',1)->get();
 
 if(count($subscribes) > 0){
     ?>
-    <div class="o-row o-container my-5">
+    <div id="mentors" class="o-row o-container my-5">
         <div class="d-flex w-full mb-4">
             <h2 style="font-size: 40px">Our Mentors</h2>
             {{-- <a href="#" class="btn btn-link">View all &rarr;</a> --}}

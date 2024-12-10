@@ -1,4 +1,4 @@
-<section class="o-section o-row homepage-power-of-three-section o-row--width-full s-color-scheme">
+<section id="hero" class="o-section o-row homepage-power-of-three-section o-row--width-full s-color-scheme">
     <div class="o-row o-row--width-full s-color-scheme">
         <div class="o-container o-container--width-normal">
             <div class="animated-section o-sm-col-12 o-lg-col-12 o-md-col-12 o-xs-col-12">

@@ -42,25 +42,34 @@
             itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement">
             <div class="nav_bar_wrapper">
                 <ul id="menu-primary-items" class="c-menu-primary o-menu o-menu--horizontal">
-                    <li aria-expanded="false" id="menu-item-23951"
+                    <li aria-expanded="false" id="menu-item-1" class="o-menu__item--horizontal c-menu-primary__item">
+                        <a href="#mentors">Find A Mentor</a>
+                    </li>
+                    {{-- <li aria-expanded="false" id="menu-item-23951"
                         class="o-menu__item--horizontal c-menu-primary__item c-menu-primary__item--23951 c-menu-primary__item--page c-menu-primary__item--has-children child-elements-8 ">
-                        <a href="#">Find A Mentor</a>
+                        <a href="#main">How It Works</a>
                         
                     </li>
                     <li aria-expanded="false" id="menu-item-23951"
                         class="o-menu__item--horizontal c-menu-primary__item c-menu-primary__item--23951 c-menu-primary__item--page c-menu-primary__item--has-children child-elements-8 ">
-                        <a href="#">How It Works</a>
+                        <a href="#about">About Us</a>
                         
                     </li>
                     <li aria-expanded="false" id="menu-item-23951"
                         class="o-menu__item--horizontal c-menu-primary__item c-menu-primary__item--23951 c-menu-primary__item--page c-menu-primary__item--has-children child-elements-8 ">
-                        <a href="#">About Us</a>
+                        <a href="#footer">Contact Us</a>
                         
+                    </li> --}}
+
+                
+                    <li aria-expanded="false" id="menu-item-2" class="o-menu__item--horizontal c-menu-primary__item">
+                        <a href="#main">How It Works</a>
                     </li>
-                    <li aria-expanded="false" id="menu-item-23951"
-                        class="o-menu__item--horizontal c-menu-primary__item c-menu-primary__item--23951 c-menu-primary__item--page c-menu-primary__item--has-children child-elements-8 ">
-                        <a href="#">Contact Us</a>
-                        
+                    <li aria-expanded="false" id="menu-item-3" class="o-menu__item--horizontal c-menu-primary__item">
+                        <a href="#about">About Us</a>
+                    </li>
+                    <li aria-expanded="false" id="menu-item-4" class="o-menu__item--horizontal c-menu-primary__item">
+                        <a href="#footer">Contact Us</a>
                     </li>
                     {{-- <li aria-expanded="false" id="menu-item-23951"
                         class="o-menu__item--horizontal c-menu-primary__item c-menu-primary__item--23951 c-menu-primary__item--page c-menu-primary__item--has-children child-elements-8 ">
