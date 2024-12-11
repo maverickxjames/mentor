@@ -44,39 +44,56 @@
     <link rel="stylesheet" id="wp-block-library-css"
         href="wordpress/wp-includes/css/dist/block-library/style.min.css?ver=6.6.1" type="text/css" media="all" />
 
-        {{-- swal fire cdn  --}}
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-        {{-- bootstrap cdn --}}
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
- 
+    {{-- swal fire cdn --}}
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    {{-- bootstrap cdn --}}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-        <style>
-            
-            .form-control{
-                height: 40px;
-                font-size: 1.8rem
-            }
 
-            select{
-                font-size: 1.8rem
-            }
+    <style>
+        .form-control {
+            height: 40px;
+            font-size: 1.8rem
+        }
 
-            .carousel-wrapper {
-                overflow: hidden;
-                white-space: nowrap;
-            }
-    
-            .carousel-item {
-                display: inline-block;
-                vertical-align: top;
-                width: 25%; /* Adjust the width for responsiveness */
-                padding: 10px;
-            }
-    
-            .pagination {
-                justify-content: center;
-            }
-        </style>
+        input[type=checkbox],
+        input[type=radio] {
+            width: 20px;
+            height: 20px;
+        }
+
+        #consent {
+            font-size: 1.5rem;
+        }
+
+        .consent-form {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        select {
+            font-size: 1.8rem
+        }
+
+        .carousel-wrapper {
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .carousel-item {
+            display: inline-block;
+            vertical-align: top;
+            width: 25%;
+            /* Adjust the width for responsiveness */
+            padding: 10px;
+        }
+
+        .pagination {
+            justify-content: center;
+        }
+    </style>
 
     <style id="classic-theme-styles-inline-css" type="text/css">
         /*! This file is auto-generated */
@@ -121,9 +138,9 @@
             position: relative;
         }
 
-        .text-danger{
+        .text-danger {
             color: red;
-    font-size: 13px;
+            font-size: 13px;
         }
 
         .upload-area:hover {
@@ -670,7 +687,8 @@ var whp_local_data = {"add_url":"https:\/\/mentormate.com\/wp-admin\/post-new.ph
                 <div class="o-vc-layout">
                     <x-hero />
                     <x-main />
-                    {{-- <x-testimonial /> --}}
+                    {{--
+                    <x-testimonial /> --}}
 
                     <section
                         class="o-section o-row has-header-overlay has-glass-effect o-row--width-full s-color-scheme">
@@ -689,7 +707,7 @@ var whp_local_data = {"add_url":"https:\/\/mentormate.com\/wp-admin\/post-new.ph
 
 
                         <x-subscribe />
-                        <x-allMentors/>
+                        <x-allMentors />
                     </section>
                 </div>
             </main>
@@ -865,8 +883,8 @@ setupUploadVideo('fileInput4', 'browseButton4', 'uploadArea4', 'previewContainer
 
     </script>
 
-<script>
-    const carousel = document.getElementById('mentor-carousel');
+    <script>
+        const carousel = document.getElementById('mentor-carousel');
     const nextBtn = document.getElementById('next-btn');
     const prevBtn = document.getElementById('prev-btn');
     let scrollAmount = 0;
@@ -880,7 +898,7 @@ setupUploadVideo('fileInput4', 'browseButton4', 'uploadArea4', 'previewContainer
         e.preventDefault();
         carousel.scrollBy({ left: -300, behavior: 'smooth' });
     });
-</script>
+    </script>
 
 </body>
 

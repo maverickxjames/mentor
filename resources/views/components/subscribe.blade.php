@@ -241,11 +241,15 @@
                                 {{ $errors->has('video_clip') ? $errors->first('video_clip') : '' }}
 
                                 {{-- Consent --}}
-                                <div class="form-group
+                                <div class="form-group consent-form
                                     {{ $errors->has('consent') ? 'has-error' : '' }}">
-                                    <label for="consent">Consent</label>
+                                    
                                     <input type="checkbox" name="consent" class="form-control"
                                         value="{{ old('consent') }}">
+                                        <label for="consent" id="consent">
+
+                                            I agree to the <a href="#0" target="_blank">terms and conditions</a> and <a href="#0" target="_blank">privacy policy</a>
+                                        </label>
                                     <span class="text-danger">{{ $errors->first('consent') }}</span>
                                 </div>
 
