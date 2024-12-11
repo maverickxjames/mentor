@@ -10,7 +10,8 @@
 
 
 <div id="subscribe" class="o-row new-homepage-contact-us o-row--width-normal s-color-scheme">
-    <div class="o-container o-container--width-normal o-container--width-same">
+    <div class="">
+    {{-- <div class="o-container o-container--width-normal o-container--width-same"> --}}
         <div class="o-sm-col-12">
             {{-- <div class="o-row o-container">
                 <div
@@ -59,6 +60,36 @@
             </div> --}}
             <div class="o-row o-container">
                 <div
+                    class="o-sm-col-12 o-lg-col-offset-0 o-lg-col-5 o-md-col-offset-0 o-md-col-5 o-sm-col-offset-0 o-hidden-sm o-xs-col-12 o-hidden-xs">
+                    <div class="c-headings-block gradient_color gradient_color u-font-size-extra-large">
+                        <div class="c-headings-block u-font-size-extra-large">
+                            <h2 class="gradient_color  c-headings-block__main h3">
+                                Join As A Mentor </h2>
+                        </div>
+                    </div>
+                    <div class="c-empty-space c-empty-space--xs"></div>
+                    <div class="wpb_single_image wpb_content_element vc_align_">
+                        <figure class="wpb_wrapper vc_figure">
+                            <div class="vc_single_image-wrapper   vc_box_border_grey"><img loading="lazy"
+                                    decoding="async" width="660" height="789"
+                                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                    class="lazy " loading="lazy"
+                                    data-src="wp-content/uploads/2023/11/homepage-lets-work-together.png"
+                                    class="lazy vc_single_image-img attachment-full" alt
+                                    title="homepage-lets-work-together"
+                                    data-srcset="wp-content/uploads/2023/11/homepage-lets-work-together.png 660w, wp-content/uploads/2023/11/homepage-lets-work-together-251x300.png 251w"
+                                    sizes="(max-width: 660px) 100vw, 660px" /><noscript><img loading="lazy"
+                                        decoding="async" width="660" height="789"
+                                        src="wp-content/uploads/2023/11/homepage-lets-work-together.png"
+                                        class="vc_single_image-img attachment-full" alt=""
+                                        title="homepage-lets-work-together"
+                                        srcset="wp-content/uploads/2023/11/homepage-lets-work-together.png 660w, wp-content/uploads/2023/11/homepage-lets-work-together-251x300.png 251w"
+                                        sizes="(max-width: 660px) 100vw, 660px" /></noscript>
+                            </div>
+                        </figure>
+                    </div>
+                </div>
+                <div
                     class="o-sm-col-12 o-lg-col-offset-0 o-lg-col-4 o-hidden-lg o-md-col-offset-0 o-md-col-4 o-hidden-md o-sm-col-offset-0 o-xs-col-12">
                     <div class="c-headings-block u-font-size-extra-large">
                         <h2 class="gradient_color  c-headings-block__main h3">
@@ -66,9 +97,9 @@
                     </div>
                 </div>
                 <div
-                    class="o-sm-col-12 o-lg-col-offset-1 o-lg-col-6 o-hidden-lg o-md-col-offset-1 o-md-col-6 o-hidden-md o-sm-col-offset-0 o-xs-col-12">
+                    class="o-sm-col-12 o-lg-col-offset-1 o-lg-col-6 o-md-col-offset-1 o-md-col-6 o-sm-col-offset-0 o-xs-col-12">
                     <div>
-                        <div id="hubspot-form-35af469e-31f9-44cb-8d2c-24ffa4a83132-87753"
+                        <div id="subscribe"
                             class="c-hs-form-wrap js-hs-form-wrap">
 
                             {{-- bootstrap form to accept mentors data and insert into database --}}
@@ -185,8 +216,8 @@
                                         value="{{ old('subject_expert') }}" required>
                                     <span class="text-danger">{{ $errors->first('subject_expert') }}</span>
                                 </div>
-                                    
-                                    {{-- Message --}}
+
+                                {{-- Message --}}
                                 <div class="form-group
                                     {{ $errors->has('message') ? 'has-error' : '' }}">
                                     <label for="message">About Yourself <span style="color:red">*</span></label>
@@ -194,8 +225,8 @@
                                         class="form-control">{{ old('message') }}</textarea>
                                     <span class="text-danger">{{ $errors->first('message') }}</span>
                                 </div>
-                                
-                               {{-- Upload Vedio Clip --}}
+
+                                {{-- Upload Vedio Clip --}}
 
                                 <div class="upload-container">
                                     <div id="uploadArea4" class="upload-area">

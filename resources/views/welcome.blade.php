@@ -51,6 +51,16 @@
  
 
         <style>
+            
+            .form-control{
+                height: 40px;
+                font-size: 1.8rem
+            }
+
+            select{
+                font-size: 1.8rem
+            }
+
             .carousel-wrapper {
                 overflow: hidden;
                 white-space: nowrap;
