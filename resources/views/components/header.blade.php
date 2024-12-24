@@ -71,11 +71,11 @@
                     <li aria-expanded="false" id="menu-item-4" class="o-menu__item--horizontal c-menu-primary__item">
                         <a href="#footer">Contact Us</a>
                     </li>
-                    {{-- <li aria-expanded="false" id="menu-item-23951"
+                    <li aria-expanded="false" id="menu-item-23951" onclick="window.location.href='/login'"
                         class="o-menu__item--horizontal c-menu-primary__item c-menu-primary__item--23951 c-menu-primary__item--page c-menu-primary__item--has-children child-elements-8 ">
-                        <a href="#">Login/Signup</a>
+                        <a >Login/Signup</a>
                         
-                    </li> --}}
+                    </li>
                     
                 </ul> 
                 
