@@ -12,6 +12,7 @@ class SubscribeController extends Controller
         $request->validate([
             'email' => 'required|email|unique:subscribes,email',
             'name' => 'required',
+            'password' => 'required',
             'phone' => 'required|numeric',
             'college' => 'required',
             'collegeproof' => 'required|file|mimes:pdf,png,jpg,jpeg,gif|max:2048',
@@ -49,6 +50,7 @@ class SubscribeController extends Controller
 
         $subscribe = new Subscribe();
         $subscribe->email = $request->email;
+        $subscribe->password = bcrypt($request->password);
         $subscribe->name = $request->name;
         $subscribe->phone = $request->phone;
         $subscribe->college = $request->college;

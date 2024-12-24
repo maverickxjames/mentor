@@ -40,6 +40,10 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        'mentor' => [
+            'driver' => 'session',
+            'provider' => 'mentors',
+        ],
     ],
 
     /*
@@ -61,14 +65,13 @@ return [
 
     'providers' => [
         'users' => [
-            'driver' => 'eloquent',
-            'model' => env('AUTH_MODEL', App\Models\User::class),
-        ],
-
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
+        'driver' => 'eloquent',
+        'model' => App\Models\User::class,
+    ],
+    'mentors' => [
+        'driver' => 'eloquent',
+        'model' => App\Models\Subscribe::class, // Assuming Subscribe is the model for mentors
+    ],
     ],
 
     /*
